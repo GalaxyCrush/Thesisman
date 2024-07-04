@@ -1,0 +1,27 @@
+.dialog-pane {
+    -fx-background-color: #2C2F33;
+    -fx-border-color: #23272A;
+    -fx-border-width: 2px;
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+}
+
+.button {
+    -fx-background-color: #7289DA;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 20px;
+}
+
+.button:hover {
+    -fx-background-color: #5865F2;
+}
+
+.button:pressed {
+    -fx-background-color: #4B6584;
+}

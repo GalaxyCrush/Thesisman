@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #424242;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.desktopapp.TeseDetails.TeseDetailsController">
+   <children>
+      <VBox fx:id="finalEntregaVBox" layoutX="510.0" layoutY="223.0" prefHeight="127.0" prefWidth="450.0">
+         <Label prefHeight="18.0" prefWidth="128.0" text="Entrega Final" textFill="WHITE">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <Label fx:id="finalEntregaIdLabel" prefHeight="39.0" prefWidth="276.0" text="Id:" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font></Label>
+         <Label fx:id="finalEntregaDataLabel" prefHeight="32.0" prefWidth="289.0" text="Data:" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font></Label>
+         <Label fx:id="finalEntregaFicheiroLabel" prefHeight="44.0" prefWidth="300.0" text="Ficheiro:" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font></Label>
+      </VBox>
+      <Label fx:id="temaLabel" contentDisplay="CENTER" layoutX="42.0" layoutY="36.0" prefHeight="46.0" prefWidth="356.0" text="Tema:" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="statusLabel" layoutX="42.0" layoutY="80.0" prefHeight="46.0" prefWidth="356.0" text="Status:" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <ImageView fitHeight="137.0" fitWidth="141.0" layoutX="898.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/user.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="sendPropostaButton" layoutX="105.0" layoutY="479.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="166.0" style="-fx-background-color: #007bff;" text="Enviar Proposta" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Label fx:id="nomeLabel" layoutX="480.0" layoutY="86.0" prefHeight="34.0" prefWidth="318.0" text="Nome" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="mailLabel" layoutX="483.0" layoutY="25.0" prefHeight="34.0" prefWidth="318.0" text="Mail" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <ListView fx:id="entregasListView" layoutX="510.0" layoutY="385.0" prefHeight="300.0" prefWidth="450.0" />
+      <Button fx:id="sendFinalButton" layoutX="106.0" layoutY="404.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="165.0" style="-fx-background-color: #007bff;" text="Enviar final" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="logoutButton" layoutX="109.0" layoutY="606.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="166.0" style="-fx-background-color: #007bff;" text=" Log out" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

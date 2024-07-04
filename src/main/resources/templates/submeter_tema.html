@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Submeter Tema</title>
+    <link rel="stylesheet" href="css/topBarMenu.css">
+    <link rel="stylesheet" href="css/submeter_tema.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Include the top bar menu fragment -->
+    <div th:replace="topBarMenu :: topBarMenu"></div>
+
+    <div id="subTema">
+        <h2> Submeter Tema </h2>
+        <form th:action="@{/submeter-tema}" method="post">
+            <h3 id="title">
+                Titulo:
+                <input required type="text" name="titulo" />
+            </h3>
+            <h3 id="title">
+                Descrição:
+                <textarea required name="descricao" style="resize: none;"></textarea>
+            </h3>
+            <h3 id="title">
+                Renumeração Mensal:
+                <input required type="number" step="0.1" name="renumeracaoMensal" />
+            </h3>
+            <h3 id="title"> Mestrados Compativeis </h3>
+            <select name="mestradosCompativeis" id="selectedMestrados" multiple="multiple">
+                <option th:each="mestrado : ${mestrados}" th:value="${mestrado.id}" th:text="${mestrado.nome}"></option>
+            </select>
+            <div th:unless="${isDocente}">
+                <h3 id="title"> Docente Orientador </h3>
+                <select size="5" th:field="*{docentes}">
+                    <option th:each="docente : ${docentes}" th:value="${docente.id}" th:text="${docente.nome}"></option>
+                </select>
+            </div>
+            <input type="submit" value="Submeter tema" />
+        </form>
+        <h3 id="error" th:text="${error}"></h3>
+    </div>
+</body>
+
+</html>

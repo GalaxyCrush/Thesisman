@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Defesas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/registar_nota_defesa.css">
+    <link rel="stylesheet" href="css/topBarMenu.css">
+</head>
+<body>
+<div th:replace="topBarMenu :: topBarMenu"></div>
+<div class="container">
+    <!-- Defesas Table -->
+    <div th:if="${defesas.size() > 0}" class="defesas-table">
+        <h2>Listar Defesas</h2>
+        <form class="form-items" th:action="@{/registar-nota-defesa}" method="post">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tipo</th>
+                    <th>Tese ID</th>
+                    <th>Aluno</th>
+                    <th>Data Entrega</th>
+                    <th>Selecionar</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Assume defesas is a list of DefesaDTO objects passed from the controller -->
+                <th:block th:each="defesa : ${defesas}">
+                    <tr>
+                        <td th:text="${defesa.id}"></td>
+                        <td th:text="${defesa.tipo}"></td>
+                        <td th:text="${defesa.entrega.teseId}"></td>
+                        <td th:text="${defesa.entrega.nomeAluno}"></td>
+                        <td th:text="${defesa.entrega.data}"></td>
+                        <td id="selecionado">
+                            <input type="radio" name="defesaId" th:value="${defesa.id}" required>
+                        </td>
+                    </tr>
+                </th:block>
+                </tbody>
+            </table>
+
+            <!-- Nota Form -->
+            <div class="nota-form">
+                <h2>Registrar Nota</h2>
+                <input type="number" id="nota" name="nota" step="0.01" required>
+
+                <button type="submit">Registrar Nota</button>
+            </div>
+
+            <div th:if="${error}">
+                <p th:text="${error}"></p>
+            </div>
+        </form>
+    </div>
+    <div id="noGrades_container">
+        <h2 id="noGrades" th:if="${defesas.size() == 0}">Não existem defesas para listar.</h2>
+    </div>
+</div>
+</body>
+</html>

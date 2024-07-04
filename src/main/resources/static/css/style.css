@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(32, 33, 36);
+    height: 100vh;
+    margin: 0;
+}
+
+#thesisman {
+    color: white;
+    display: block;
+    text-align: center;
+}

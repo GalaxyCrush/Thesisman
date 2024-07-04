@@ -1,0 +1,49 @@
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+    font-size: larger;
+}
+
+.statistics-table {
+    width: 50%;
+    margin: 0 auto 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.statistics-table thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.statistics-table th, .statistics-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.statistics-table th {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.statistics-table td {
+    font-size: 14px;
+}
+
+.statistics-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.statistics-table tbody tr:hover {
+    background-color: #f1f1f1;
+}

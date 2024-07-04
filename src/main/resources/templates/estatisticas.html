@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Estatísticas de Sucesso dos Alunos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/topBarMenu.css">
+    <link rel="stylesheet" href="css/estatisticas.css">
+</head>
+<body>
+<div th:replace="topBarMenu :: topBarMenu"></div>
+<div class="container">
+    <h2>Estatísticas de Sucesso dos Alunos</h2>
+
+    <h3>Ano Atual</h3>
+    <table class="statistics-table">
+        <thead>
+        <tr>
+            <th>Métrica</th>
+            <th>Valor</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Número de Alunos</td>
+            <td th:text="${info.numAlunosAnoAtual}"></td>
+        </tr>
+        <tr>
+            <td>Número de Alunos Chumbados</td>
+            <td th:text="${info.numAlunosChumbadosAnoAtual}"></td>
+        </tr>
+        <tr>
+            <td>Número de Alunos Passados</td>
+            <td th:text="${info.numAlunosPassadosAnoAtual}"></td>
+        </tr>
+        <tr>
+            <td>Média de Notas</td>
+            <td th:text="${info.mediaNotasAnoAtual}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3>Estatísticas Totais</h3>
+    <table class="statistics-table">
+        <thead>
+        <tr>
+            <th>Métrica</th>
+            <th>Valor</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Número de Alunos</td>
+            <td th:text="${info.numAlunosTotal}"></td>
+        </tr>
+        <tr>
+            <td>Número de Alunos Chumbados</td>
+            <td th:text="${info.numAlunosChumbadosTotal}"></td>
+        </tr>
+        <tr>
+            <td>Número de Alunos Passados</td>
+            <td th:text="${info.numAlunosPassadosTotal}"></td>
+        </tr>
+        <tr>
+            <td>Média de Notas</td>
+            <td th:text="${info.mediaNotasTotal}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #424242;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.desktopapp.listTemas.ListarTemasController">
+    <children>
+        <Button fx:id="candidatarButton" layoutX="819.0" layoutY="42.0" mnemonicParsing="false" onAction="#candidatarTema" prefHeight="66.0" prefWidth="180.0" style="-fx-background-color: #007bff; -fx-border: none; -fx-text-fill: white; -fx-font-size: 16px;" text="Candidatar" />
+      <Button fx:id="candidaturasButton" layoutX="818.0" layoutY="150.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="180.0" style="-fx-background-color: #007bff; -fx-border: none; -fx-text-fill: white; -fx-font-size: 16px; -fx-wrap-text: true;" text="Minhas Candidaturas" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="logOut" layoutX="929.0" layoutY="646.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="118.0" style="-fx-background-color: #007bff; -fx-border: none; -fx-text-fill: white; -fx-font-size: 16px;" text="Log out" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <ListView layoutX="44.0" layoutY="33.0" prefHeight="653.0" prefWidth="700.0" fx:id="temaListView" />
+    </children>
+</AnchorPane>

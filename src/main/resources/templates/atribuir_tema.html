@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atribuir Tema</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/atribuir_tema.css">
+    <link rel="stylesheet" href="css/topBarMenu.css">
+</head>
+<body>
+<div th:replace="topBarMenu :: topBarMenu"></div>
+<div th:if="${info.alunos.size() > 0 && info.temas.size() > 0}" class="container">
+    <h2>Atribuir Tema para Aluno</h2>
+    <form th:action="@{/atribuir-tema}" method="post">
+        <!-- Alunos Table -->
+        <div id="tables">
+        <div class="table-container">
+            <table class="alunos-table">
+                <caption>Alunos</caption>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Selecionado</th>
+                </tr>
+                <th:block th:each="aluno : ${info.alunos}">
+                    <tr>
+                        <td th:text="${aluno.id}"></td>
+                        <td id="aluno-name" th:text="${aluno.nome}"></td>
+                        <td id="selecionado">
+                            <input type="radio" name="alunoId" th:value="${aluno.id}" required>
+                        </td>
+                    </tr>
+                </th:block>
+            </table>
+        </div>
+
+        <!-- Temas Table -->
+        <div class="table-container">
+            <table class="temas-table">
+                <caption>Temas</caption>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Tipo</th>
+                    <th>Selecionado</th>
+                </tr>
+                <th:block th:each="tema : ${info.temas}">
+                    <tr>
+                        <td th:text="${tema.id}"></td>
+                        <td id="tema-titulo" th:text="${tema.titulo}"></td>
+                        <td th:text="${tema.tipoTema}"></td>
+                        <td id="selecionado">
+                            <input type="radio" name="temaId" th:value="${tema.id}" required>
+                        </td>
+                    </tr>
+                </th:block>
+            </table>
+        </div>
+        </div>
+
+        <button id="atribuir_button" type="submit">Atribuir Tema</button>
+    </form>
+    <div th:if="${error}">
+        <p th:text="${error}"></p>
+    </div>
+</div>
+<div>
+    <h1 id="noTema" th:if="${info.alunos.size() == 0}">Não existem alunos do mestrado para atribuir tema</h1>
+    <h1 id="noTema" th:if="${info.temas.size() == 0}">Não existem temas compativeis com o seu mestrado para atribuir</h1>
+</div>
+</body>
+</html>

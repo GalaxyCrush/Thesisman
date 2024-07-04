@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Teses</title>
+    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/listar_teses.css">
+    <link rel="stylesheet" href="css/topBarMenu.css">
+</head>
+<body>
+<div th:replace="topBarMenu :: topBarMenu"></div>
+
+<h2>Lista de Teses</h2>
+
+<form th:if="${teses.size() > 0}" th:action="@{/selecionar-tese}" method="post">
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Aluno</th>
+            <th>Tema</th>
+            <th>Status</th>
+            <th>Selecionar</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr th:each="tese : ${teses}">
+                <td th:text="${tese.id}"></td>
+                <td th:text="${tese.aluno.nome}"></td>
+                <td th:text="${tese.tema.titulo}"></td>
+                <td th:text="${tese.status}"></td>
+                <td>
+                    <input required type="radio" name="selectedTese" th:value="${tese.id + '__' + tese.status}">
+                </td>
+        </tr>
+        </tbody>
+    </table>
+    <input id="selectButton" type="submit" value="Selecionar Tese">
+    <br>
+    <div th:if="${error}">
+        <p th:text="${error}"></p>
+    </div>
+</form>
+<div>
+    <h1 id="noTeses" th:if="${teses.size() == 0}">Não existem teses que necessitem de marcação de defesa</h1>
+</div>
+</body>
+</html>

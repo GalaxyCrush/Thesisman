@@ -1,0 +1,99 @@
+#noTema {
+    color: white;
+    display: block;
+    text-align: center;
+}
+
+#tables {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.table-container {
+    flex: 1;
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 15px auto;
+    font-size: 18px;
+    text-align: left;
+}
+
+.alunos-table {
+    margin-right: 55px;
+    width: 60%;
+}
+
+.temas-table {
+    margin-left: 55px;
+    width: 75%;
+}
+
+table, th, td {
+    padding: 8px;
+    background-color: white;
+    padding: 12px 15px;
+    border-bottom: 0.5px solid black;
+}
+
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+.alunos-table td:nth-child(2),
+.temas-table td:nth-child(2) {
+    width: 300px;
+}
+
+.alunos-table td:nth-child(1),
+.temas-table td:nth-child(1) {
+    width: 10px;
+    text-align: center;
+}
+
+caption {
+    caption-side: top;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    font-size: larger;
+}
+
+#atribuir_button {
+    display: block;
+    align-items: center;
+    margin: 20px auto;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#selecionado {
+    width: 15%;
+    text-align: center;
+}
+
+input[type="radio"] {
+    transform: scale(1.2);
+}
+#atribuir_button:hover {
+    background-color: #0056b3;
+}
+
+#error {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}

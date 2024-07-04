@@ -1,0 +1,68 @@
+.root {
+    -fx-alignment: center;
+    -fx-font-size: large;
+    -fx-background-color: #424242;
+}
+#Email, #Password, #loginLabel {
+    -fx-text-fill: white;
+}
+
+#loginForm {
+    -fx-padding: 20;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 4, 0, 2, 2);
+    -fx-pref-width: 450;
+    -fx-pref-height: 450;
+    -fx-alignment: center;
+}
+#loginLabel {
+    -fx-margin: 20 0 0 0;
+}
+#emailField, #passwordField {
+    -fx-pref-width: 100%;
+    -fx-padding: 10;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5;
+    -fx-text-fill: white;
+}
+#loginForm .heading {
+    -fx-text-fill: #007bff;
+    -fx-margin: 0 0 20 0;
+}
+
+#loginForm .sub-heading {
+    -fx-text-fill: white;
+    -fx-alignment: baseline-left;
+    -fx-margin: 0 0 30 0;
+}
+
+#emailField, #passwordField {
+    -fx-pref-width: 100%;
+    -fx-padding: 10;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5;
+}
+
+/* Button styling */
+.button {
+    -fx-pref-width: 100%;
+    -fx-pref-height: 20%;
+    -fx-padding: 10;
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+    -fx-font-size: medium;
+    -fx-margin: 20 0 0 0;
+}
+
+.button:hover {
+    -fx-background-color: #0056b3;
+}
+
+/* Error message styling */
+#errorLabel {
+    -fx-text-fill: red;
+    -fx-margin: 10 0 0 0;
+}

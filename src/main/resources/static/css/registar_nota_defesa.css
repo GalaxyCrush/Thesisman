@@ -1,0 +1,112 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#noGrades_container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#noGrades {
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.defesas-table {
+    width: 70%;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.defesas-table h2 {
+    text-align: center;
+    color: white;
+}
+
+.defesas-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.defesas-table th, .defesas-table td {
+    background-color: white;
+    padding: 10px;
+    border-bottom: 0.5px solid black;
+    text-align: left;
+}
+
+.defesas-table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+.nota-form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nota-form h2 {
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.form-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#nota, .form-items button {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-items button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+td:nth-child(1) {
+    width: 10px;
+    text-align: center;
+}
+
+#selecionado {
+    width: 20px;
+    text-align: center;
+}
+
+input[type="radio"] {
+    transform: scale(1.2);
+}
+
+.form-items button:hover {
+    background-color: #0056b3;
+}
+
+.nota-form div {
+    margin-top: 20px;
+    color: red;
+    font-size: 14px;
+}

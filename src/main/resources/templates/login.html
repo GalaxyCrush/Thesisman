@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section>
+        <div id="container">
+            <h2>Login:</h2>
+            <form th:action="@{/login}" method="post">
+                <h3>
+                    Email:
+                    <input type="text" name="email" />
+                </h3>
+                <h3>
+                    Password:
+                    <input type="text" name="password" />
+                </h3>
+                <input type="submit" value="Iniciar Sessão" />
+            </form>
+            <form th:action="@{/criar-empresarial}" method="get">
+                <input type="submit" value="Registar Empresarial" />
+            </form>
+            <h3 id="error" th:text="${error}"></h3>
+    </section>
+    <div id="message_container">
+        <h2 id="message" th:text="${populate}"></h2>
+    </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Marcar Defesa Proposta</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/marcar_defesa_final.css">
+    <link rel="stylesheet" href="/css/topBarMenu.css">
+</head>
+
+<body>
+    <!-- Include the top bar menu fragment -->
+    <div th:replace="topBarMenu :: topBarMenu"></div>
+
+    <div id="final">
+        <h2>Marcar Defesa de Final</h2>
+        <h2 th:text="'ID: ' + ${teseId}"> </h2>
+        <form th:action="@{/marcar-defesa-final}" method="post">
+            <input type="hidden" th:name="teseId" th:value="${teseId}" />
+
+            <h3 id="title">Data</h3>
+            <input type="date" name="data" required />
+
+            <h3 id="title">Hora de Início</h3>
+            <input type="time" name="horaInicio" required />
+
+            <h3 id="title">Arguente</h3>
+            <select name="arguenteId">
+                <option th:each="docente : ${docentes}" th:value="${docente.id}" th:text="${docente.nome}"></option>
+            </select>
+
+            <h3 id="title">Presidente de Júri</h3>
+            <select name="presidenteJuriId">
+                <option th:each="docente : ${docentes}" th:value="${docente.id}" th:text="${docente.nome}"></option>
+            </select>
+
+            <h3 id="title">Tipo</h3>
+            <select name="tipoPresenca">
+                <option th:value="PRESENCIAL">PRESENCIAL</option>
+                <option th:value="REMOTA">REMOTA</option>
+            </select>
+
+            <div name="salaShow">
+                <h3 id="title">Sala</h3>
+                <select name="salaId">
+                    <option th:each="sala : ${salas}" th:value="${sala.id}" th:text="${sala.localizacao}"></option>
+                </select>
+            </div>
+
+            <input type="submit" value="Marcar Defesa" />
+        </form>
+
+        <form class="cancel" th:action="@{/listar-teses}" method="get">
+            <input type="submit" value="Cancelar" />
+        </form>
+
+        <h3 id="error" th:text="${error}"></h3>
+    </div>
+    <script src="/js/salaShow.js"></script>
+</body>
+
+</html>

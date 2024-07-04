@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #424242;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.desktopapp.listCandidaturas.ListCandidaturasController">
+   <children>
+      <Button fx:id="removeButton" layoutX="868.0" layoutY="52.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="143.0" style="-fx-background-color: #007bff;" text="Remover" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="backButton" layoutX="868.0" layoutY="142.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="143.0" style="-fx-background-color: #007bff;" text="Atrás" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <ListView fx:id="candidaturaListView" layoutX="45.0" layoutY="33.0" prefHeight="653.0" prefWidth="700.0" />
+   </children>
+</AnchorPane>

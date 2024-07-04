@@ -1,0 +1,70 @@
+table {
+    width: 40%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-size: 18px;
+    text-align: left;
+}
+
+thead tr {
+    background-color: #f2f2f2;
+    border-bottom: 2px solid #fdfdfd;
+}
+
+th, td {
+    background-color: white;
+    padding: 12px 15px;
+    border-bottom: 0.5px solid black;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+td:nth-child(1) {
+    width: 10px;
+    text-align: center;
+}
+
+#selecionado {
+    width: 20px;
+    text-align: center;
+}
+
+input[type="radio"] {
+    transform: scale(1.2);
+}
+
+caption {
+    caption-side: top;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    font-size: larger;
+}
+
+#escolher_orientador, #cancel {
+    display: block;
+    margin: 20px auto;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#escolher_orientador:hover, #cancel:hover {
+    background-color: #0056b3;
+}
+
+#error {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}

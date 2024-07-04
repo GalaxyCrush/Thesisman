@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Escolher Orientador</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/escolher_orientador.css">
+    <link rel="stylesheet" href="css/topBarMenu.css">
+</head>
+<body>
+<div th:replace="topBarMenu :: topBarMenu"></div>
+<div class="container">
+    <h2>Escolher Orientador</h2>
+    <form th:action="@{/escolher_orientador}" method="post">
+        <input type="hidden" name="alunoId" th:value="${alunoId}">
+        <input type="hidden" name="temaId" th:value="${temaId}">
+        <div class="table-container">
+            <table class="docentes-table">
+                <caption>Docentes</caption>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Selecionar</th>
+                </tr>
+                <th:block th:each="docente : ${docentes}">
+                    <tr>
+                        <td th:text="${docente.id}"></td>
+                        <td th:text="${docente.nome}"></td>
+                        <td id="selecionado">
+                            <input type="radio" name="docenteId" th:value="${docente.id}" required>
+                        </td>
+                    </tr>
+                </th:block>
+            </table>
+        </div>
+        <button id="escolher_orientador" type="submit">Selecionar Orientador</button>
+    </form>
+    <form th:action="@{/atribuir-tema}" method="get">
+        <input id="cancel" type="submit" value="Cancelar"/>
+    </form>
+    <div th:if="${error}">
+        <p th:text="${error}"></p>
+    </div>
+</div>
+</body>
+</html>

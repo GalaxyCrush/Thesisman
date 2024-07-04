@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: rgb(32, 33, 36);" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.desktopapp.login.LoginController">
+   <children>
+      <Pane layoutX="347.0" layoutY="165.0" prefHeight="390.0" prefWidth="385.0" style="-fx-background-color: #424242; -fx-background-radius: 10px;">
+         <children>
+            <Label layoutX="110.0" layoutY="174.0" prefHeight="35.0" prefWidth="73.0" text="Password:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="108.0" layoutY="100.0" prefHeight="35.0" prefWidth="61.0" text="Email:" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font></Label>
+            <Label alignment="CENTER" layoutX="80.0" layoutY="32.0" prefHeight="47.0" prefWidth="208.0" text="Login" textAlignment="CENTER" textFill="#007bff">
+               <font>
+                  <Font name="Comic Sans MS" size="30.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordField" layoutX="106.0" layoutY="209.0" prefHeight="35.0" prefWidth="175.0" promptText="Password" />
+            <TextField fx:id="emailField" layoutX="105.0" layoutY="135.0" prefHeight="35.0" prefWidth="175.0" promptText="E-mail" />
+            <Button fx:id="login" layoutX="138.0" layoutY="280.0" mnemonicParsing="false" onAction="#login" prefHeight="47.0" prefWidth="110.0" style="-fx-background-color: #007bff;" text="Login" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="errorLabel" alignment="CENTER" layoutX="137.0" layoutY="344.0" prefHeight="17.0" prefWidth="110.0" text="Login Failed" textFill="RED" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,40 @@
+h2 {
+    color: white;
+    text-align: center;
+}
+
+#topBarMenu {
+    padding: 20px;
+    margin: 0 auto;
+    border-bottom: white solid 1px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input[type="submit"] {
+    width: 250px;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#options {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#options form {
+    width: auto;
+    margin: 0 10px;
+}

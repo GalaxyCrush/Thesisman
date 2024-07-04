@@ -1,0 +1,34 @@
+<!-- fragments/top-bar-menu.html -->
+<div th:fragment="topBarMenu">
+    <div id="topBarMenu">
+        <h2> Thesisman </h2>
+        <div id="options">
+            <div th:if="${isAdmin}">
+                <form th:action="@{/atribuir-tema}" method="get">
+                    <input type="submit" value="Atribuir Temas"/>
+                </form>
+            </div>
+            <div th:if="${isDocente}">
+                <form th:action="@{/listar-teses}" method="get">
+                    <input type="submit" value="Marcar Defesa"/>
+                </form>
+            </div>
+            <div th:if="${isDocente}">
+                <form th:action="@{/registar-nota-defesa}" method="get">
+                    <input type="submit" value="Registar Nota Defesa"/>
+                </form>
+            </div>
+            <div th:if="${isDocente}">
+                <form th:action="@{/estatisticas}" method="get">
+                    <input type="submit" value="Estatisticas"/>
+                </form>
+            </div>
+            <form th:action="@{/submeter-tema}" method="get">
+                <input type="submit" value="Submeter tema"/>
+            </form>
+            <form th:action="@{/logout}" method="get">
+                <input type="submit" value="Logout"/>
+            </form>
+        </div>
+    </div>
+</div>
