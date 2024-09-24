@@ -16,7 +16,10 @@ To run the JavaFX project (the web version must be running to work correctly)
 
 - It must be in the desktop-app folder
 - Run the command mvn clean javafx:run
-
+## Made by:
+- João Pereira 58189
+- Martim Pereira 58223
+- Daniel Nunes 58257
 ## Note:
 
 - It is advisable to test only one application at a time as there may be incompatibilities with the mockup data used for testing.
